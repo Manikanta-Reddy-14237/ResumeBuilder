@@ -1,0 +1,123 @@
+<%- include('partials/header') -%>
+    <div class="container">
+        <div class="top">
+            
+            <h2><%= name %><br><span>Web Developer</span></h2>
+
+            <div class="group">
+                <div class="leftSide">
+                    <div class="imgBx">
+                        <img src="<%=profilePicture%>" alt="profile_pic">
+                    </div>
+                </div>
+                <div class="rightSide">
+                    <P><%= aboutMe %></P>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="left_side">
+                
+                <h4>Contact</h4>
+                <ul class="contactInfo">
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <span class="text"><%= phoneNumber %></span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <span class="text"><%= email %></span>
+                        </li>
+                        <li>
+                        <span class="icon"><i class="fa-solid fa-globe"></i></span>
+                        <span class="text">www.website.com</span>
+                        </li>
+                        <li>
+                        <span class="icon"><i class="fa-brands fa-linkedin-in"></i></span>
+                        <span class="text">www.linkedn.com</span>
+                        </li>
+                        <li>
+                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <span class="text">patna,bihar,india</span>
+                        </li>
+                </ul>
+
+                
+                <h4>Skills</h4>
+                <div class="skills">
+                    
+                    <% for (let i = 0; i < skills.length; i++) { %>
+                        <div class="skillsBox" style="--i:<%= skills[i].proficiency %>%;">
+                            <p><%= skills[i].name %></p>
+                            
+                            <div class="value"></div>
+                        </div>
+                    <% } %>
+                </div>
+
+              
+            </div>
+
+            <div class="right_side">
+                
+                <h4 class="adjstMargin">Education</h4>
+                <div class="edu_group">
+                    
+                    <% for (let i = 0; i < education.length; i++) { %>
+                        <div class="edu_groupBx">
+                            <p><%= education[i].date %></p>
+                            <div class="value">
+                                <b><%= education[i].degree %></b>
+                                <p><%= education[i].institution %></p>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+
+                
+                <h4 class="adjstMargin">Work Experience</h4>
+                <div class="edu_group">
+                    
+                    <% for (let i = 0; i < workExperience.length; i++) { %>
+                        <div class="edu_groupBx">
+                            <p><%= workExperience[i].date %></p>
+                            <div class="value">
+                                <b><%= workExperience[i].position %></b>
+                                <p><%= workExperience[i].company %></p>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+
+              
+            </div>
+        </div>
+
+        <div class="hobbies">
+            
+            <h4 class="adjstMargin">Hobbies</h4>
+            <ul>
+                
+                <% for (let i = 0; i < interests.length; i++) { %>
+                    <li>
+                        <% if (interests[i] == "reading" || interests[i] == "Reading") { %>
+                            <i class="fa-solid fa-book"></i>
+                        <% } else if (interests[i] == "music" || interests[i] == "Music") { %>
+                            <i class="fa-solid fa-music"></i>
+                        <% } else if (interests[i] == "singing" || interests[i] == "Singing") { %>
+                            <i class="fa-solid fa-microphone"></i>
+                        <% } else if (interests[i] == "coding" || interests[i] == "Coding") { %>
+                            <i class="fa-solid fa-code"></i>
+                            <% } else if (interests[i] == "drawing" || interests[i] == "Drawing") { %>
+                                <i class="fa-solid fa-pencil"></i>
+                        <% } %>
+                        <p><%= interests[i] %></p>
+                    </li>
+                <% } %>
+                
+                
+            </ul>
+        </div>
+    </div>
+    <%- include('partials/footer') -%>

@@ -1,0 +1,75 @@
+<%- include('partials/header1') -%>
+
+<div>
+    <form enctype="multipart/form-data" >
+        <h1>Resume Builder</h1>
+        <!-- Personal Information -->
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName"><br>
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName"><br>
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age"><br>
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" name="phoneNumber"><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="webLink">WebSite Link</label>
+        <input type="text" id="webLink" name="webLink"><br><br>
+        <label for="linkdn">Linkedn Link</label>
+        <input type="text" id="linkdn" name="linkdn"><br><br>
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address"><br><br>
+        <!-- Add this inside your <form> element -->
+        <label for="profilePicture">Profile Picture</label>
+        <input type="file" id="profilePicture" name="profilePicture"><br><br><br>
+
+        <!-- Education Section -->
+        <label for="schoolName">School Name</label>
+        <input type="text" id="schoolName" name="schoolName"><br>
+        <label for="schoolDegree">Degree</label>
+        <input type="text" id="schoolDegree" name="schoolDegree"><br>
+        <label for="schoolDate">Date</label>
+        <input type="text" id="schoolDate" name="schoolDate"><br>
+        <label for="collegeName">College Name</label>
+        <input type="text" id="collegeName" name="collegeName"><br>
+        <label for="collegeDegree">Degree</label>
+        <input type="text" id="collegeDegree" name="collegeDegree"><br>
+        <label for="collegeDate">Date</label>
+        <input type="text" id="collegeDate" name="collegeDate"><br>
+        <label for="higherEducationName">Higher Education Name</label>
+        <input type="text" id="higherEducationName" name="higherEducationName"><br>
+        <label for="higherEducationDegree">Degree</label>
+        <input type="text" id="higherEducationDegree" name="higherEducationDegree"><br>
+        <label for="higherEducationDate">Date</label>
+        <input type="text" id="higherEducationDate" name="higherEducationDate"><br>
+        
+        <!-- About You -->
+        <label for="aboutMe">About Me</label>
+        <textarea cols="90" rows="4" id="aboutMe" name="aboutMe"></textarea><br>
+
+        <img src="css/forms.jpeg"class="left-image" alt="resume">
+        <!-- Hobbies -->
+        <label for="hobbies">Hobbies</label>
+        <input type="text" id="hobbies" name="hobbies"><br>
+
+        <!-- Skills -->
+        <label for="skills">Skills (comma-separated)</label>
+        <input type="text" id="skills" name="skills"><br>
+
+        <!-- Work Experience Section -->
+        <label for="workPosition">Job Position</label>
+        <input type="text" id="workPosition" name="workPosition"><br>
+        <label for="workCompany">Company Name</label>
+        <input type="text" id="workCompany" name="workCompany"><br>
+        <label for="workDuration">Work Duration</label>
+        <input type="text" id="workDuration" name="workDuration"><br>
+
+        <!-- Additional Fields can be added as needed -->
+
+        <button type="submit"  name="view" formaction="/form" formmethod="post">View Resume</button>
+        <button type="submit" name="getPdf" formaction="/generate-pdf" formmethod="post">Get Pdf</button>
+    </form>
+</div>
+
+<%- include('partials/footer') -%>

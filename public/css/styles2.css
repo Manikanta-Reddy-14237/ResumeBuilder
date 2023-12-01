@@ -1,0 +1,154 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the form container */
+form {
+    position: relative;
+    left: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Style the left-side image */
+.left-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%; /* Adjust the width as needed */
+    height: 100vh;
+    z-index: -1; /* Place the image behind the form */
+}
+
+.left-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Style the form header */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style labels and input fields */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Style the buttons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Style the buttons on hover */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Add some spacing between elements */
+br {
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+}
+
+/* Style the header if needed */
+
+/* Add custom styles for specific form sections */
+
+/* Personal Information Section */
+#firstName,
+#lastName,
+#age,
+#phoneNumber,
+#email {
+    width: 48%;
+    margin-right: 2%;
+}
+
+
+
+/* Education Section */
+#schoolName,
+#schoolDegree,
+#schoolDate,
+#collegeName,
+#collegeDegree,
+#collegeDate,
+#higherEducationName,
+#higherEducationDegree,
+#higherEducationDate {
+    width: 48%;
+    margin-right: 2%;
+}
+
+/* About Me Section */
+#aboutMe {
+    width: 100%;
+}
+
+/* Hobbies Section */
+#hobbies {
+    width: 100%;
+}
+
+/* Skills Section */
+#skills {
+    width: 100%;
+}
+
+/* Work Experience Section */
+#workPosition,
+#workCompany,
+#workDuration {
+    width: 48%;
+    margin-right: 2%;
+}
